@@ -1,6 +1,4 @@
 FROM postgres:12
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends gzip
 COPY 1_init_sofia.sh /docker-entrypoint-initdb.d/
 COPY 2_populate_test_db.sh /docker-entrypoint-initdb.d/
 COPY 3_grants.sh /docker-entrypoint-initdb.d/
