@@ -21,7 +21,7 @@ services:
 
 
     opal_server1:
-        image: idragan/opalsrv:latest
+        image: idragan/opal-sophia
         hostname: opal_server1
         expose:
             - 8443
