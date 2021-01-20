@@ -50,3 +50,4 @@ services:
 volumes:
     srv1:
     pgdata:        
+
