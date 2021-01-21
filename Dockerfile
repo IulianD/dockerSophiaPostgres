@@ -1,4 +1,7 @@
-FROM postgres:12
+FROM postgres:12.5
+ENV PGDATA /sophia/data
+RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
+VOLUME "$PGDATA"
 RUN mkdir /import
 COPY *.sh /docker-entrypoint-initdb.d/
 COPY omop_test*.sql.gz /
