@@ -6,6 +6,8 @@ services:
         hostname: postgres1
         environment:
                 - POSTGRES_PASSWORD=opalpass    
+                - PG_NUMHOSTS=1
+                - PG_THISHOST=1
         volumes:
                 - pgdata:/var/lib/postgresql/data          
                   # added pgdata volume to separate it from the main container    
